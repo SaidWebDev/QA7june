@@ -37,6 +37,11 @@
 
 <dependencies>
         <dependency>
+            <groupId>_103885706.alice.dummy</groupId>
+            <artifactId>datamodel</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>com.ibm.decision</groupId>
             <artifactId>engine-compact-runtime</artifactId>
         </dependency>

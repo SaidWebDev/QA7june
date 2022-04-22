@@ -1,0 +1,1 @@
+{"operationId":null,"body":"{\n  \"nom\": \"Claude\",\n  \"prévisionMétéo\": {\n    \"AlerteTempête\": true,\n    \"PrévisionDesPrécipitations\": 100,\n    \"TempératureRessentie\": \"Agréable\"\n  }\n}"}

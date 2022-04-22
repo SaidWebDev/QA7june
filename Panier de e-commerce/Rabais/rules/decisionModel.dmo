@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>5f12d547-eaa8-40c5-b4cc-d5368aa0fec9</uuid>
+  <locale>fr_FR</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="fr_FR"/>
+    </extensionElements>
+    <inputData id="node_0" name="Client">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Client1" collection="false" name="Client"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Client" typeRef="Client1"/>
+    </inputData>
+    <decision id="node_1" name="Rabais">
+        <description>Remise commerciale pour ce client</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Client1" collection="false" name="Client"/>
+                <output bomType="java.lang.Double" collection="false" name="Rabais"/>
+                <rule defaultRule="false" href="node_1/Table%20de%20remise.dmt" kind="DecisionTable" name="Table de remise"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Rabais" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

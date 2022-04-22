@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Somme</name>
+  <uuid>97ccbc0d-bb34-4378-a05b-168b0569dc7d</uuid>
+  <locale>fr_FR</locale>
+  <definition><![CDATA[affecter à décision le total des Prix des Produits de Panier  ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

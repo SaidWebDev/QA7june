@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Prix du panier">
+  <name>prix-du-panier</name>
+  <uuid>0c1ccd16-78c9-4517-af8e-8eeebca7a83e</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#994a6f43-141b-44d6-8e37-7bf8327eddc7"/>
+  <targetRuleProject href="../../Prix%20du%20panier#af9530a8-e402-425a-9b04-6397fdfadaf0"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA[prix-du-panier]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

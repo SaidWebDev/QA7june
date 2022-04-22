@@ -13,7 +13,17 @@
     <dependencies>
         <dependency>
             <groupId>_103885706.alice.dummy</groupId>
+            <artifactId>datamodel</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>_103885706.alice.dummy</groupId>
             <artifactId>dummydmo</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>_103885706.alice.dummy</groupId>
+            <artifactId>tam</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -75,6 +85,8 @@
         </profile>
     </profiles>
 
+
+
 <build>
         <resources>
             <resource>
@@ -101,7 +113,25 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>_103885706.alice.dummy</groupId>
+                                    <artifactId>datamodel</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>_103885706.alice.dummy</groupId>
                                     <artifactId>dummydmo</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>_103885706.alice.dummy</groupId>
+                                    <artifactId>tam</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>

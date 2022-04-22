@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Calcul</name>
+  <uuid>20d33305-9f72-4567-9add-abdc15db5723</uuid>
+  <locale>fr_FR</locale>
+  <definition><![CDATA[définitions 
+    soit remise étant le calcul du rabais à partir de 
+    Client étant Client;
+ 
+alors
+    affecter à décision 'Prix total' * (1-remise) ;
+    afficher "La remise est de " + remise*100 +"%";]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

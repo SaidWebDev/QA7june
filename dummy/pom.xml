@@ -61,7 +61,9 @@
     </dependencyManagement>
     <modules>
         <module>.decisionservice</module>
+        <module>datamodel</module>
         <module>dummydmo</module>
+        <module>tam</module>
     </modules>
 
     <build>

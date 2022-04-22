@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>New variable set</name>
+  <uuid>8a8f89ea-6673-4453-b45d-fbdc8b6da2f4</uuid>
+  <variables name="newVariable" type="_103885706.alice.dummy.datamodel.K" initialValue="" verbalization="the new variable" jsonName=""/>
+</ilog.rules.studio.model.base:VariableSet>

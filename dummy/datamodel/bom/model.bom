@@ -1,0 +1,17 @@
+
+package _103885706.alice.dummy.datamodel;
+
+
+public class K
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "k"
+        property "de.generated" "true"
+{
+    public K()
+                property autoExpand "true"
+                property beanConstructor "true"
+                property "dataio.default" "true"
+                property groups "BALA"
+                property prototype "true";
+}
+

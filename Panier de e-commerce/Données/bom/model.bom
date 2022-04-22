@@ -1,0 +1,91 @@
+
+
+public class Client1
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Client"
+        property "de.generated" "true"
+{
+    public string nom
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Nom"
+                property update "true";
+    public Statut1 statut1
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Statut"
+                property update "true";
+    public Client1(string nom, Statut1 statut1)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public Client1()
+                property "dataio.default" "true";
+}
+
+public class Panier1
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Panier"
+        property "de.generated" "true"
+{
+    public java.util.List produits domain 0,* class Produit1
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "produits"
+                property update "true";
+    public Panier1(java.util.List produits domain 0,* class Produit1)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public Panier1()
+                property "dataio.default" "true";
+    public void addTo_produits(Produit1 produits)
+                property collectionAttribute "produits"
+                property update "true";
+    public void clear_produits()
+                property collectionAttribute "produits"
+                property update "true";
+    public void removeFrom_produits(Produit1 produits)
+                property collectionAttribute "produits"
+                property update "true";
+    public void set_produits(java.util.Collection produits domain 0,* class Produit1)
+                property collectionAttribute "produits"
+                property update "true";
+}
+
+public class Produit1
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Produit"
+        property "de.generated" "true"
+{
+    public string nom1
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Nom"
+                property update "true";
+    public double prix1
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Prix"
+                property update "true";
+    public Produit1(string nom1, double prix1)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public Produit1()
+                property "dataio.default" "true";
+}
+
+public class Statut1
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Statut"
+        property "de.generated" "true"
+{
+    domain {static argent, static bronze, static or}
+    public static final readonly Statut1 argent
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Argent";
+    public static final readonly Statut1 bronze
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Bronze";
+    public static final readonly Statut1 or
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Or";
+}
+

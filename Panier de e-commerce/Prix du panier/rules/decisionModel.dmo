@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>994a6f43-141b-44d6-8e37-7bf8327eddc7</uuid>
+  <locale>fr_FR</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="fr_FR"/>
+    </extensionElements>
+    <inputData id="node_0" name="Client">
+        <description>Information client</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Client1" collection="false" name="Client"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Client" typeRef="Client1"/>
+    </inputData>
+    <decision id="node_1" name="Prix du panier">
+        <description>Calcule le prix d'un panier de e-commerce, en incluant les prix des produits achetés et la remise du client.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Client1" collection="false" name="Client"/>
+                <input bomType="java.lang.Double" collection="false" name="Prix total"/>
+                <output bomType="java.lang.Double" collection="false" name="Prix du panier"/>
+                <rule defaultRule="false" href="node_1/Calcul.drl" kind="BusinessRule" name="Calcul"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Prix du panier" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_5"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_2" name="Panier">
+        <description>Contenu du panier</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Panier1" collection="false" name="Panier"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Panier" typeRef="Panier1"/>
+    </inputData>
+    <decision id="node_4" name="Prix total">
+        <description>Calcule le pris total du panier</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Panier1" collection="false" name="Panier"/>
+                <output bomType="java.lang.Double" collection="false" name="Prix total"/>
+                <rule defaultRule="false" href="node_4/Somme.drl" kind="BusinessRule" name="Somme"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Prix total" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_5" name="Rabais">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Rabais" typeRef="java.lang.Double"/>
+        <encapsulatedLogic typeRef="java.lang.Double">
+            <formalParameter name="client" typeRef="Client1"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.samplesolutions.panier_de_e_commerce.remise.Rabais"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(Client1)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -20,6 +20,8 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.String" collection="false" name="Input 1"/>
                 <output bomType="java.lang.String" collection="false" name="Decision 2"/>
+                <rule defaultRule="false" href="node_2/CGHHG.drl" kind="BusinessRule" name="CGHHG"/>
+                <rule defaultRule="false" href="node_2/NGNFGN.dmt" kind="DecisionTable" name="NGNFGN"/>
             </ruleset>
         </extensionElements>
         <variable id="node_2_ii" name="Decision 2" typeRef="java.lang.String"/>
