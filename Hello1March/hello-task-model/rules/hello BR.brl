@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>hello BR</name>
-  <uuid>8206b313-df6e-4ec0-9608-31f53819864b</uuid>
-  <locale>en_US</locale>
-  <definition><![CDATA[ // set 'the decision' to "hello " + 'the name' + " !" ;
- print "hello ";]]></definition>
-</ilog.rules.studio.model.brl:ActionRule>
