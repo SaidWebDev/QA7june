@@ -1,1 +1,0 @@
-{"operationId":null,"body":"{\n  \"nom\" : \"Dominique\",\n  \"prévisionMétéo\" : {\n    \"TempératureRessentie\" : \"Froid\",\n    \"AlerteTempête\" : false,\n    \"PrévisionDesPrécipitations\" : 10\n  }\n}"}

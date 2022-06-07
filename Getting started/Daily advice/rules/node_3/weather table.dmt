@@ -44,7 +44,7 @@
                                 <Param><![CDATA[cold]]></Param>
                             </Expression>
                             <ActionSet>
-                                <Action DefId="A0">
+                                <Action DefId="A0" Enabled="false">
                                     <Expression>
                                         <Param><![CDATA["Cold day! Take a coat."]]></Param>
                                     </Expression>
@@ -56,7 +56,7 @@
                                 <Param><![CDATA[warm]]></Param>
                             </Expression>
                             <ActionSet>
-                                <Action DefId="A0">
+                                <Action DefId="A0" Enabled="false">
                                     <Expression>
                                         <Param><![CDATA["Warm day! Enjoy."]]></Param>
                                     </Expression>
@@ -145,6 +145,5 @@
             <Data Name="Definitions(C0)#Width"><![CDATA[244]]></Data>
         </ResourceSet>
     </Resources>
-</DT>
-</definition>
+</DT></definition>
 </ilog.rules.studio.model.dt:DecisionTable>
